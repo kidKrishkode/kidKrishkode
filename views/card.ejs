@@ -1,0 +1,35 @@
+<li class="drop">
+    <div class="product">
+        <div class="product-component-top" style="background: url('<%= img %>');background-repeat: no-repeat;background-size: cover;background-position: center;">
+            <div class="product-price"><%= cost %></div>
+        </div>
+        <div class="product-component-middle">
+            <div class="product-head"><%= name %></div>
+            <div class="product-description"><%= desc %></div>
+        </div>
+        <div class="product-tags"><%= tags %></div>
+        <div class="product-component-info">
+            <div class="rating flo">
+                <div class="icon">
+                    <%= rating %>
+                </div>
+                <div class="rate"><%= rate[0] %>/<%= rate[1] %></div>
+            </div>
+            <div class="more-component flo">
+                <div class="more flo">
+                    <div class="code-boll <%= lang.col %>"></div><%= lang.name %>
+                </div>
+                <div class="more">
+                    <i class="fa fa-calendar"></i><%= modified %>
+                </div>
+                <div class="more">
+                    <i class="fa fa-trophy"></i>391ms
+                </div>
+            </div>
+        </div>
+        <div class="product-component-bottom">
+            <button class="btn btn-outline-dark" onclick="route('<%= link %>');"><i class="fa fa-github"></i> Git Code</button>
+            <button class="btn btn-primary" onclick="route(system.encodedURI('/projects/open','id=<%= id %>'))">Open it <i class="fa fa-long-arrow-right"></i></button>
+        </div>
+    </div>
+</li>

@@ -1,0 +1,21 @@
+{
+  "name": "Krishfolio",
+  "short_name": "Krishfolio",
+  "description": "Krishfolio is my personal portfolio website, where i can open to hire and show down my all projects and ideas",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "1500x1500 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo1500.png",
+      "type": "image/png",
+      "sizes": "1500x1500"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#22577aff",
+  "background_color": "#ffffff"
+}

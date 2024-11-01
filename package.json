@@ -1,0 +1,22 @@
+{
+  "name": "Krishfolio",
+  "version": "1.0.0",
+  "description": "Krishfolio is my personal portfolio website, where i can open to hire and show down my all projects and ideas",
+  "main": "index.js",
+  "scripts": {
+    "build": "ejs-cli views/ -o build/",
+    "start": "node index.js",
+    "test": "node public/App.test.js"
+  },
+  "author": "Krishnendu Mitra",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "jimp": "^0.22.12",
+    "jsonfile": "^6.1.0",
+    "socket.io": "^4.7.5"
+  }
+}
