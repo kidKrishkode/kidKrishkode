@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "img": "./assets/contributer/1.png",
+        "name": "Krishnendu Mitra",
+        "profession": "Full Stack Web Developer",
+        "pronoune": "He/Him",
+        "description": "Ahoy hoy everyone, my self Krishnendu Mitra, and I'm a freelance web Developer with extensive experience for over 5 years. My expertise is to create and website design, thumbnails design, poster making and many more. In past I am work with world's famous companies like Alphabet and Edequ. I do my job very professionaly and smartways...",
+        "contact": "https://github.com/Krishnendu-Mitra/"
+    },
+    {
+        "id": 1,
+        "img": "./assets/contributer/2.png",
+        "name": "Souvik Kar",
+        "profession": "Frontend Web Developer",
+        "pronoune": "He/Him",
+        "description": "Hi, my name is Souvik Kar, and I am a frontend web developer.",
+        "contact": "https://github.com/"
+    },
+    {
+        "id": 2,
+        "img": "#",
+        "name": "Saptarshi Pramanik",
+        "profession": "Ml Engineer & Data Analytics",
+        "pronoune": "He/Him",
+        "description": "",
+        "contact": "https://github.com/"
+    },
+    {
+        "id": 3,
+        "img": "./assets/contributer/4.png",
+        "name": "Rajanya Chakraborti",
+        "profession": "UI/UX & Graphics Engineer",
+        "pronoune": "She/Her",
+        "description": "Hello everyone, I am Rajanya Chakraborty, and I am work here as a Website Content Writer.",
+        "contact": "https://github.com/"
+    }
+]

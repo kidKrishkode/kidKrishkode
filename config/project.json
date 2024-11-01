@@ -1,0 +1,123 @@
+[
+    {
+        "id": 0,
+        "img": "1.png",
+        "name": "C language",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "synopsis": "",
+        "cost": 0,
+        "rating": [0,0,2,0,0,0,5],
+        "language": [
+            {
+                "name": "C",
+                "parcentage": 100
+            }
+        ],
+        "screen_short": [],
+        "tags": [],
+        "video_support": [],
+        "info": {
+            "upper":{
+                "Software_Model": "Recursive Agile",
+                "Framework": "HexJs",
+                "Stack_Technology": "JPEN",
+                "Database": "Josn",
+                "API": "",
+                "License": "MIT"
+            },
+            "lower":{
+                "Version_Support": "1.0",
+                "Interface": "Avalible",
+                "Aditional_Security": "Not Provided"
+            }
+        },
+        "deployment":{
+            "gitpage": -1,
+            "development": -1
+        },
+        "modified": "21/08/24",
+        "code": "",
+        "link": ["https://github.com/Krishnendu-Mitra/"]
+    },
+    {
+        "id": 1,
+        "img": "2.png",
+        "name": "Python language",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "cost": 0,
+        "rating": [0,0,0,0,1,4,9],
+        "language": [
+            {
+                "name": "Python",
+                "parcentage": 100
+            }
+        ],
+        "screen_short": [],
+        "tags": ["Python", "Py", "Machine Learning", "Jupiter"],
+        "video_support": [],
+        "info": {
+            "upper":{
+                "Software_Model": "DevOps",
+                "Framework": "Django",
+                "Stack_Technology": "Django",
+                "Database": "SQL",
+                "API": "",
+                "License": "Apache2.0"
+            },
+            "lower":{
+                "Version_Support": "1.0",
+                "Interface": "Avalible",
+                "Aditional_Security": "Not Provided"
+            }
+        },
+        "deployment":{
+            "gitpage": -1,
+            "development": -1
+        },
+        "modified": "22/08/24",
+        "code": "",
+        "link": ["https://github.com/Krishnendu-Mitra/Python-Code.git"]
+    },
+    {
+        "id": 2,
+        "img": "3.png",
+        "name": "Master Linked List in C",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "cost": 1,
+        "rating": [0,0,2,0,0,0,5],
+        "language": [
+            {
+                "name": "C",
+                "parcentage": 100
+            }
+        ],
+        "screen_short": [],
+        "tags": ["DSA", "C", "linkedlist", "Stack", "Queue", "DAA","structure", "pointer"],
+        "video_support": [],
+        "info": {
+            "upper":{
+                "Software_Model": "Recursive Agile",
+                "Framework": "HexJs",
+                "Stack_Technology": "JPEN",
+                "Database": "Josn",
+                "API": "",
+                "License": "MIT"
+            },
+            "lower":{
+                "Version_Support": "1.0",
+                "Interface": "Avalible",
+                "Aditional_Security": "Not Provided"
+            }
+        },
+        "contributter": [0, 1, 2, 3],
+        "deployment": {
+            "gitpage": 1,
+            "development": 0
+        },
+        "modified": "23/08/24",
+        "code": "./assets/code/linklist.c",
+        "link": ["https://github.com/Krishnendu-Mitra/linkedlist.git"]
+    }
+]
