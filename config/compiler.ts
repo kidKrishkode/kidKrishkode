@@ -387,7 +387,7 @@ module.exports = {
         if(multiLineComment.length === 2){
             const [multiLineStart, multiLineEnd] = multiLineComment;
             const multiLinePattern = new RegExp(`${escapeRegex(multiLineStart)}[\\s\\S]*?${escapeRegex(multiLineEnd)}`, 'g');
-            codeText = codeText.replace(multiLinePattern, (match) => `<span class="comment">${match}</span>`);
+            codeText = codeText.replace(multiLinePattern, (match) => `${match}`);
         }
         const stringLine = ['"','"'];
         if(stringLine.length === 2){
