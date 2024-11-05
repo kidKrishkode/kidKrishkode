@@ -145,6 +145,12 @@ app.get('/contributter', (req, res) => {
     });
 });
 
+app.get('/about', (req, res) => {
+    Promise.all(promises).then(([header]) => {
+        res.status(200).render('about',{header});
+    });
+});
+
 function WEB(port){
     this.active = true;
     this.port = port;
