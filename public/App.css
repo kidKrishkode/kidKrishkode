@@ -1257,6 +1257,146 @@ footer{
     font-size: 14px;
     font-weight: bold;
 }
+#about{
+    max-height: 90vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    margin-top: 20px;
+}
+#about .about-head{
+    display: flex;
+    flex-direction: row;
+}
+#about .about-head .about-left{
+    width: 30%;
+}
+.about-head .about-left .user-dp-back{
+    --size: 300px;
+    width: var(--size);
+    height: var(--size);
+    margin: 15% auto 10px auto;
+    background-image: url('../images/scratch1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0px;
+    transform: rotateY(180deg);
+}
+.about-head .about-left .user-dp-back .user-dp{
+    width: 180px;
+    height: 180px;
+    border: 8px solid var(--code-color);
+    box-shadow: 0px 0px 4px 2px grey;
+    border-radius: 50%;
+    background-image: url('../images/avt1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s ease-in-out;
+    margin: auto;
+    transform: rotateY(180deg);
+}
+#about .about-head .about-right{
+    width: 70%;
+    padding-top: 25px;
+}
+.about-head .about-right .header .user-name{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--emerald);
+    padding: 2px 4px;
+    transition: 1s ease-in-out;
+}
+.about-head .about-right .header .flx{
+    padding: 2px 4px;
+    width: 70%;
+    color: grey;
+    font-weight: bold;
+    transition: 1s ease-in-out;
+}
+.about-head .about-right .header .flx .profession{
+    color: #4d4d4d;
+    font-size: 17px;
+}
+#about .box{
+    margin: 40px 0px 10px 0px;
+    padding: 2px 4px;
+    transition: 1s ease-in-out;
+}
+#about .head{
+    color: var(--para-color);
+    text-transform: capitalize;
+}
+#about .head.mr-l5{
+    margin-left: 5%;
+}
+#about .box .about{
+    text-align: justify;
+    color: grey;
+    font-size: 14px;
+    width: 90%;
+}
+.box .table{
+    width: 90%;
+    margin: 4px auto;
+}
+#about .box .table tr{
+    width: 100%!important;
+}
+#about .box .table thead tr th{
+    color: #fff!important;
+    text-align: center!important;
+    border-left: 1px solid var(--bg-color);
+    border-right: 1px solid var(--bg-color);
+    user-select: none;
+    transition: 1s ease-in-out;
+}
+#about .box .table tr td{
+    color: var(--reverse-white);
+    transition: 1s ease-in-out;
+}
+#about .box .table-skills{
+    width: 90%;
+    margin: 4px auto;
+}
+#about .box .table-skills tbody{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#about .box .table-skills tr{
+    padding: 8px 2px;
+    color: var(--reverse-white);
+    transition: 1s ease-in-out;
+    width: 48%;
+    display: flex;
+    flex-direction: row;
+}
+#about .box .table-skills tbody tr td:nth-child(odd){
+    width: 30%;
+    color: grey;
+    padding: 8px 4px;
+}
+#about .box .table-skills tbody tr td:nth-child(even){
+    width: 70%;
+    user-select: none;
+    padding-top: 12px;
+}
+#about .box .activity{
+    width: 90%;
+    margin: auto auto;
+}
+#about .box .activity div{
+    color: grey;
+    font-size: 14px;
+}
+#about .box .activity div:first-child{
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--reverse-white);
+    margin-top: 10px;
+}
 
 @media only screen and (max-width: 900px){
     .navbar img{
@@ -1422,10 +1562,10 @@ footer{
         left: -12%;
         bottom: -6%;
     }
-    #project{
+    #project, #about .about-head{
         flex-direction: column;
     }
-    .project-left-component, .project-right-component{
+    .project-left-component, .project-right-component, #about .about-head .about-left, #about .about-head .about-right, #about .about-head .about-right .about, #about .box div, #about .box table{
         width: 100%;
     }
     .project-left-component{
@@ -1487,6 +1627,47 @@ footer{
     .user-card{
         width: 90%;
         height: 95%;
+    }
+    #about{
+        padding: 2px 6px;
+    }
+    .about-head .about-left .user-dp-back{
+        --size: 200px;
+        margin: 10px auto;
+        padding-top: 30px;
+    }
+    .about-head .about-left .user-dp-back .user-dp{
+        width: 140px;
+        height: 140px;
+    }
+    .about-head .about-right .header .user-name{
+        font-size: 40px;
+    }
+    .about-head .about-right .header .flx{
+        width: 100%;
+        font-size: 12px;
+        flex-direction: column;
+    }
+    .about-head .about-right .header .flx .profession{
+        font-size: 14px;
+    }
+    #about .head.mr-l5{
+        margin-left: 0%;
+    }
+    #about .box{
+        margin-top: 20px;
+    }
+    #about .box .table{
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    #about .box .table-skills{
+        width: 100%;
+    }
+    #about .box .table-skills tr{
+        width: 100%;
     }
 
 }
