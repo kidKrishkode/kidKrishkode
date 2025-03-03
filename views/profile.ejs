@@ -8,7 +8,7 @@
         <hr>
         <p class="form-text text-muted"><%= description %></p>
         <hr>
-        <div class="flo"><span class="head"><i class="fa fa-home"></i> Pronouns: </span><span><%= pronoune %></span></div>
+        <div class="flo"><span class="head"><i class='<%= pronoune=="He/Him"?"fa fa-mars":"fa fa-venus" %>'></i> Pronouns: </span><span><%= pronoune %></span></div>
         <div class="flo"><span class="head"><i class="fa fa-github"></i> Contact: </span><span><%= contact %></span></div>
         <div class="btn btn-danger" onclick="system.closeUser();">Close</div>
     </div>

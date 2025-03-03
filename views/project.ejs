@@ -43,7 +43,11 @@
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-image" role="tabpanel" aria-labelledby="nav-image-tab">
                     <div class="project-couple flx">
-                        <div class="project-couple-big"></div>
+                        <div class="project-couple-big">
+                            <div class="slideshow-container">
+                                
+                            </div>
+                        </div>
                         <div class="project-couple-small">
                             <div class="project-couple-icon"><i class="fa fa-camera"></i></div>
                             <h5>Sample Shorts from Project</h5>
@@ -161,8 +165,10 @@
         lang = eval('('+lang.replaceAll('&#34;','"')+')');
         let majorLang = eval(config.hex.majorLang);
         document.querySelector('.project-logo').classList.add(majorLang(lang).col);
+        lang = eval(config.hex.sortLang)(lang);
 
         temp='',list='';
+        // console.log(lang);
         for(let i=0; i<lang.length; i++){
             temp += `<div class="progress-bar ${lang[i].name.toLowerCase()}" role="progressbar" style="width: ${lang[i].parcentage}%" aria-valuenow="${lang[i].parcentage}" aria-valuemin="0" aria-valuemax="100"></div>`;
             list += `<li><div class="lang-dots ${lang[i].name.toLowerCase()}"></div>${lang[i].name}<span class="percentage">${lang[i].parcentage}%</span></li>`;
@@ -182,8 +188,9 @@
 
         temp = "<%= JSON.stringify(project.deployment) %>";
         temp = eval('('+temp.replaceAll('&#34;','"')+')');
-        document.querySelector(".deployment-list").innerHTML = `<li>${temp.gitpage==1?'<i class="fa fa-check-circle grn"></i>':temp.gitpage==-1?'<i class="fa fa-minus-circle gry"></i>':'<i class="fa fa-fa-times-circle red"></i>'}github-page<span>${temp.gitpage>=0?'some times ago':''}</span></li>
-        <li>${temp.development==1?'<i class="fa fa-check-circle grn"></i>':temp.development==-1?'<i class="fa fa-minus-circle gry"></i>':'<i class="fa fa-times-circle red"></i>'}Development</li>`;
+        document.querySelector(".deployment-list").innerHTML = `<li style="display: ${temp?.gitpage>=0?'block':'none'}">${temp?.gitpage==1?'<i class="fa fa-check-circle grn"></i>':temp?.gitpage==-1?'<i class="fa fa-minus-circle gry"></i>':'<i class="fa fa-fa-times-circle red"></i>'}github-page<span>${temp.gitpage>=0?'some times ago':''}</span></li>
+        <li style="display: ${temp?.production>=0?'block':'none'}">${temp?.production==1?'<i class="fa fa-check-circle grn"></i>':temp?.production==-1?'<i class="fa fa-minus-circle gry"></i>':'<i class="fa fa-times-circle red"></i>'}Production</li>
+        <li style="display: ${temp?.development>=0?'block':'none'}">${temp?.development==1?'<i class="fa fa-check-circle grn"></i>':temp?.development==-1?'<i class="fa fa-minus-circle gry"></i>':'<i class="fa fa-times-circle red"></i>'}Development</li>`;
 
         temp = "<%= project.rating %>";
         let rateChecker = eval(config.hex.rateChecker);
@@ -202,5 +209,39 @@
         gcCompiler('#sample-code');
         ideDeploy('#sample-code','#sample-code-line', updateLine);
     },1000);
+    setTimeout(() => {
+        let imagelist = "<%= project.screen_short %>";
+        imagelist = imagelist.split(",");
+        sliderImageMaker = eval(config.hex.sliderImageMaker);
+        let temp = sliderImageMaker(imagelist);
+        // console.log("form frontend\n"+temp);
+        if(temp!=null){
+            document.querySelector('.slideshow-container').innerHTML = temp;
+            showSlides(1, 0);
+        }else{
+            document.querySelector('.slideshow-container').innerHTML = "<div class='no-media'>No media provided for this project!</div>";
+        }
+    },1000);
+</script>
+<script>
+    let slideIndex = [1,1];
+    let slideId = ["mySlides1", "mySlides2"]
+    // showSlides(1, 0);
+
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+    
+    function showSlides(n, no) {
+      let i;
+      let x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+    }
+    
 </script>
 </html>
