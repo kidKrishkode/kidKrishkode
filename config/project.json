@@ -18,17 +18,18 @@
         "video_support": [],
         "info": {
             "upper":{
-                "Software_Model": "Recursive Agile",
-                "Framework": "HexJs",
-                "Stack_Technology": "JPEN",
-                "Database": "Josn",
+                "Software_Model": "",
+                "Framework": "",
+                "Stack_Technology": "",
+                "Database": "",
                 "API": "",
                 "License": "MIT"
             },
             "lower":{
                 "Version_Support": "1.0",
-                "Interface": "Avalible",
-                "Aditional_Security": "Not Provided"
+                "Interface": "Not Avalible",
+                "Aditional_Security": "Not Provided",
+                "Inspired_By": ""
             }
         },
         "deployment":{
@@ -58,17 +59,18 @@
         "video_support": [],
         "info": {
             "upper":{
-                "Software_Model": "DevOps",
-                "Framework": "Django",
-                "Stack_Technology": "Django",
-                "Database": "SQL",
+                "Software_Model": "",
+                "Framework": "",
+                "Stack_Technology": "",
+                "Database": "",
                 "API": "",
                 "License": "Apache2.0"
             },
             "lower":{
                 "Version_Support": "1.0",
-                "Interface": "Avalible",
-                "Aditional_Security": "Not Provided"
+                "Interface": "Not Avalible",
+                "Aditional_Security": "Not Provided",
+                "Inspired_By": ""
             }
         },
         "deployment":{
@@ -93,25 +95,26 @@
                 "parcentage": 100
             }
         ],
-        "screen_short": [],
+        "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
         "tags": ["DSA", "C", "linkedlist", "Stack", "Queue", "DAA","structure", "pointer"],
         "video_support": [],
         "info": {
             "upper":{
-                "Software_Model": "Recursive Agile",
-                "Framework": "HexJs",
-                "Stack_Technology": "JPEN",
-                "Database": "Josn",
+                "Software_Model": "",
+                "Framework": "",
+                "Stack_Technology": "",
+                "Database": "",
                 "API": "",
                 "License": "MIT"
             },
             "lower":{
                 "Version_Support": "1.0",
-                "Interface": "Avalible",
-                "Aditional_Security": "Not Provided"
+                "Interface": "Not Avalible",
+                "Aditional_Security": "Not Provided",
+                "Inspired_By": ""
             }
         },
-        "contributter": [0, 1, 2, 3],
+        "contributter": [],
         "deployment": {
             "gitpage": 1,
             "development": 0
@@ -119,5 +122,280 @@
         "modified": "23/08/24",
         "code": "./assets/code/linklist.c",
         "link": ["https://github.com/Krishnendu-Mitra/linkedlist.git"]
+    },
+    {
+        "id": 3,
+        "img": "3.png",
+        "name": "Cavernous Hoax Scanner",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "cost": 1,
+        "rating": [0,0,1,0,0,7,5],
+        "language": [
+            {
+                "name": "EJS",
+                "parcentage": 47.2
+            },
+            {
+                "name": "TypeScript",
+                "parcentage": 9.9
+            },
+            {
+                "name": "JavaScript",
+                "parcentage": 11.9
+            },
+            {
+                "name": "CSS",
+                "parcentage": 18.1
+            },
+            {
+                "name": "Python",
+                "parcentage": 12
+            },
+            {
+                "name": "HTML",
+                "parcentage": 0.8
+            },
+            {
+                "name": "BatchFile",
+                "parcentage": 0.1
+            }
+        ],
+        "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
+        "tags": ["CHS", "deepfake detection", "machine learning", "JPEN", "final year project", "classification", "image compressor", "image converter", "image generator", "python", "devops"],
+        "video_support": [],
+        "info": {
+            "upper":{
+                "Software_Model": "Recursive Agile",
+                "Framework": "HexJs",
+                "Stack_Technology": "JPEN",
+                "Database": "Json",
+                "API": "FastAPI",
+                "License": "MIT"
+            },
+            "lower":{
+                "Version_Support": "1.0",
+                "Interface": "Avalible",
+                "Aditional_Security": "Not Provided",
+                "Inspired_By": ""
+            }
+        },
+        "contributter": [0, 1, 2, 3],
+        "deployment": {
+            "gitpage": 1,
+            "production": 1,
+            "development": 0
+        },
+        "modified": "31/06/24",
+        "code": "https://github.com/kidKrishkode/CavernousHoaxScanner.github.io/",
+        "link": ["https://github.com/kidKrishkode/CavernousHoaxScanner.github.io/", "https://chsweb.vercel.app/", "https://chsapi.vercel.app/"]
+    },
+    {
+        "id": 4,
+        "img": "3.png",
+        "name": "ExamCall",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "cost": 0,
+        "rating": [0,0,2,0,0,6,4],
+        "language": [
+            {
+                "name": "EJS",
+                "parcentage": 47.2
+            },
+            {
+                "name": "TypeScript",
+                "parcentage": 22
+            },
+            {
+                "name": "JavaScript",
+                "parcentage": 11.9
+            },
+            {
+                "name": "CSS",
+                "parcentage": 18.1
+            },
+            {
+                "name": "HTML",
+                "parcentage": 0.8
+            }
+        ],
+        "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
+        "tags": ["Exam", "UGC NET", "GATE", "UPSC", "MCQ", "MSQ", "exam taking system", "typescript", "JTEN", "javascript", "project"],
+        "video_support": [],
+        "info": {
+            "upper":{
+                "Software_Model": "Recursive Agile",
+                "Framework": "HexJs",
+                "Stack_Technology": "JTEN",
+                "Database": "Json",
+                "API": "",
+                "License": "MIT"
+            },
+            "lower":{
+                "Version_Support": "1.0",
+                "Interface": "Avalible",
+                "Aditional_Security": "Not Provided",
+                "Inspired_By": ""
+            }
+        },
+        "deployment": {
+            "gitpage": 1,
+            "production": 1,
+            "development": 0
+        },
+        "modified": "17/05/24",
+        "code": "https://github.com/kidKrishkode/ExamCall.github.io",
+        "link": ["https://github.com/kidKrishkode/ExamCall.github.io", "https://examcall.vercel.app/"]
+    },
+    {
+        "id": 5,
+        "img": "3.png",
+        "name": "Streamline Diagnosis",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "cost": 0,
+        "rating": [0,0,1,0,2,5,7],
+        "language": [
+            {
+                "name": "EJS",
+                "parcentage": 37.8
+            },
+            {
+                "name": "JavaScript",
+                "parcentage": 24.3
+            },
+            {
+                "name": "CSS",
+                "parcentage": 20.3
+            },
+            {
+                "name": "Python",
+                "parcentage": 17.6
+            }
+        ],
+        "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
+        "tags": ["Streamline", "oral diagnosis", "home doctor", "cancer", "diabetes", "lungs disease", "eye disease", "python", "logistic regression", "decision tree", "JPEN", "javascript", "project"],
+        "video_support": [],
+        "info": {
+            "upper":{
+                "Software_Model": "Recursive Agile",
+                "Framework": "HexJs",
+                "Stack_Technology": "JPEN",
+                "Database": "Json",
+                "API": "",
+                "License": "MIT"
+            },
+            "lower":{
+                "Version_Support": "1.0",
+                "Interface": "Avalible",
+                "Aditional_Security": "Not Provided",
+                "Inspired_By": ""
+            }
+        },
+        "deployment": {
+            "gitpage": 1,
+            "development": 0
+        },
+        "modified": "23/07/24",
+        "code": "https://github.com/kidKrishkode/StreamlineDiagnosis.github.io",
+        "link": ["https://github.com/kidKrishkode/StreamlineDiagnosis.github.io"]
+    },
+    {
+        "id": 6,
+        "img": "3.png",
+        "name": "Calculator.github.io",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "cost": 0,
+        "rating": [0,0,0,0,0,1,10],
+        "language": [
+            {
+                "name": "HTML",
+                "parcentage": 59.3
+            },
+            {
+                "name": "JavaScript",
+                "parcentage": 25.5
+            },
+            {
+                "name": "CSS",
+                "parcentage": 15.2
+            }
+        ],
+        "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
+        "tags": ["Calculator", "simple calculator", "basic project", "html", "frontend", "css", "bootstrap css", "javascript project"],
+        "video_support": [],
+        "info": {
+            "upper":{
+                "Software_Model": "",
+                "Framework": "Bootstrap",
+                "Stack_Technology": "",
+                "Database": "",
+                "API": "",
+                "License": "MIT"
+            },
+            "lower":{
+                "Version_Support": "1.0",
+                "Interface": "Avalible",
+                "Aditional_Security": "Not Provided",
+                "Inspired_By": ""
+            }
+        },
+        "deployment": {
+            "gitpage": 1
+        },
+        "modified": "15/01/25",
+        "code": "https://github.com/kidKrishkode/Calculator.github.io",
+        "link": ["https://github.com/kidKrishkode/Calculator.github.io"]
+    },
+    {
+        "id": 7,
+        "img": "3.png",
+        "name": "Clock",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "cost": 0,
+        "rating": [0,0,1,0,2,0,9],
+        "language": [
+            {
+                "name": "HTML",
+                "parcentage": 47.1
+            },
+            {
+                "name": "JavaScript",
+                "parcentage": 25.7
+            },
+            {
+                "name": "CSS",
+                "parcentage": 27.2
+            }
+        ],
+        "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
+        "tags": ["Clock", "analog clock", "digital clock", "html", "frontend", "css", "bootstrap css", "javascript project"],
+        "video_support": [],
+        "info": {
+            "upper":{
+                "Software_Model": "",
+                "Framework": "Bootstrap",
+                "Stack_Technology": "",
+                "Database": "",
+                "API": "",
+                "License": "MIT"
+            },
+            "lower":{
+                "Version_Support": "1.0",
+                "Interface": "Avalible",
+                "Aditional_Security": "Not Provided",
+                "Inspired_By": ""
+            }
+        },
+        "contributter": [],
+        "deployment": {
+            "gitpage": 1
+        },
+        "modified": "27/01/25",
+        "code": "https://github.com/kidKrishkode/Clock.github.io",
+        "link": ["https://github.com/kidKrishkode/Clock.github.io"]
     }
 ]

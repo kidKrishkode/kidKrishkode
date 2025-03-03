@@ -120,6 +120,22 @@ module.exports = {
         }
         return null;
     },
+    sortLang: (languages) => {
+        let temp = {"name": "Empty", "parcentage": 0};
+        if(languages.length < 2){
+            return languages;
+        }
+        for(let j=0; j<languages.length-1; j++){
+            for(let i=0; i<languages.length-j-1; i++){
+                if(languages[i+1].parcentage > languages[i].parcentage){
+                    temp = languages[i]; 
+                    languages[i] = languages[i+1]; 
+                    languages[i+1] = temp;
+                }
+            }
+        }
+        return languages;
+    },
     projectByid: (id, productLib) => {
         for(let i=0; i<productLib.length; i++){
             if(productLib[i].id == id*1){
@@ -147,6 +163,19 @@ module.exports = {
             }
         }
         return null;
+    },
+    sliderImageMaker: (list) => {
+        let temp='';
+        console.log(list);
+        if(list!=''){
+            for(let i=0; i<list.length; i++){
+                temp += `<div class="mySlides1"><img src="${list[i]}" alt="Krishfolio"></div>`;
+            }
+            temp += '<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a><a class="next" onclick="plusSlides(1, 0)">&#10095;</a>'
+            return temp;
+        }else{
+            return null;
+        }
     },
     foo:() => {
         return 0;
