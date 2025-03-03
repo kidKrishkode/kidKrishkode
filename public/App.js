@@ -58,9 +58,9 @@ function navbar_toggle(){
 }
 Loader.prototype.creat = function(){
     if(loader.loaded!=false){
-        const loaderEle = document.createElement('div');
-        loaderEle.classList.add("loader");
-        loaderEle.innerHTML = `<div class="centerDia"><div class="loading"></div></div>`;
+        const loaderEle = document.createElement('section');
+        loaderEle.classList.add("loading");
+        loaderEle.innerHTML = `<div class="loader"></div><div class="loader reversloder"></div><div class="loaderhead">Krishfolio</div>`;
         document.body.appendChild(loaderEle);
     }
 }
@@ -69,8 +69,10 @@ Loader.prototype.remove = function(time){
         return false;
     }
     setTimeout(()=>{
-        document.body.removeChild(document.querySelector('.loader'));
+        document.body.removeChild(document.querySelector('.loading'));
         loader.loaded = false;
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
         system.VisiblePage();
     },time);
 }
@@ -169,7 +171,7 @@ System.prototype.themeToggle = function(id){
     system.pushDataBase();
 }
 System.prototype.setTheme = function(){
-    theme = local_memory[0].value;
+    theme = local_memory[0].value==undefined?window.matchMedia('(prefers-color-scheme: dark)').matches==true?1:0:local_memory[0].value;
     for(let i=0; i<themeSet[theme].length; i++){
         document.documentElement.style.setProperty(themeSet[theme][i][0], themeSet[theme][i][1]);
     }

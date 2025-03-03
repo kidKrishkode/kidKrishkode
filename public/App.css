@@ -1,18 +1,38 @@
-:root {
-    --bg-color: #fff;
-    --mit-color: #fcfafa;
-    --heading-color: #22577aff;
-    --para-color: #0c8ff0ff;
-    --target-color: #d9e7db;
-    --verdigris: #0c8ff0ff;
-    --emerald: #1c6bac;
-    --reverse-white: #000;
-    --reverse-black: #fff;
-    --glass-color: #ececec79;
-    --code-color: #ebf0f4;
-    --code-li-color: #fff;
-    --loader-back: #fffffff6;
-    --loader-font: #22577aff;
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #fff;
+        --mit-color: #fcfafa;
+        --heading-color: #22577aff;
+        --para-color: #0c8ff0ff;
+        --target-color: #d9e7db;
+        --verdigris: #0c8ff0ff;
+        --emerald: #1c6bac;
+        --reverse-white: #000;
+        --reverse-black: #fff;
+        --glass-color: #ececec79;
+        --code-color: #ebf0f4;
+        --code-li-color: #fff;
+        --loader-back: #fffffff6;
+        --loader-font: #22577aff;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root{
+        --bg-color: #0d1117;
+        --mit-color: #161b22;
+        --heading-color: #22577aff;
+        --para-color: #0c8ff0ff;
+        --target-color: #272b28;
+        --verdigris: #0c8ff0ff;
+        --emerald: #1c6bac;
+        --reverse-white: #fff;
+        --reverse-black: #000;
+        --glass-color: #161b2279;
+        --code-color: #161b20;
+        --code-li-color: #1E1E1E;
+        --loader-back: #000000f6;
+        --loader-font: #22577aff;
+    }
 }
 body{
     margin: 0;
@@ -396,49 +416,79 @@ footer{
     bottom: -80px;
     left: -100px;
 }
-.loader{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background: var(--loader-back);
-    z-index: 99;
-}
 .loading{
-    color: var(--loader-font);
-    font-size: 45px;
-    text-indent: -9999em;
-    overflow: hidden;
-    width: 1em;
-    height: 1em;
+    height: 100%;
+    width: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+    background: var(--loader-back);
+    user-select: none;
+	z-index: 99;
+}
+.loader{
+    transform: rotateZ(45deg);
+    perspective: 1000px;
     border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    color: var(--loader-font);
     position: absolute;
-    top: 30%;
-    left: 45%;
-    transform: translateZ(0);
-    animation: spiner 1s infinite ease, round 1s infinite ease;
-}  
-@keyframes spiner{
-    0%{
-        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-    }5%,95%{
-        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-    }10%,59%{
-        box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
-    }20%{
-        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
-    }38%{
-        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
-    }100%{
-        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-    }
-}  
-@keyframes round{
-    0%{ 
-        transform: rotate(0deg);
-    }100%{ 
-        transform: rotate(360deg); 
+	top: 30%;
+	left: calc((100% - 200px)/2);
+    transition: 1s ease-in-out;
+}
+.loader:before,.loader:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+}
+.loader:after{
+    color: var(--loader-font);
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+.reversloder{
+	transform: rotate(180deg);
+	position: absolute;
+	top: 30%;
+	left: calc((100% - 200px)/2);
+}
+.loaderhead{
+    position: absolute;
+    bottom: 5%;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    color: #bebdbddc;
+    font-size: 20px;
+    font-family: sans-serif;
+    transition: 1s ease-in-out;
+}
+@keyframes spin{
+    0%,100%{
+        box-shadow: .2em 0px 0 0px currentcolor;
+    }12%{
+        box-shadow: .2em .2em 0 0 currentcolor;
+    }25%{
+        box-shadow: 0 .2em 0 0px currentcolor;
+    }37%{
+        box-shadow: -.2em .2em 0 0 currentcolor;
+    }50%{
+        box-shadow: -.2em 0 0 0 currentcolor;
+    }62%{
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+    }75%{
+        box-shadow: 0px -.2em 0 0 currentcolor;
+    }87%{
+        box-shadow: .2em -.2em 0 0 currentcolor;
     }
 }
 .modal{
@@ -1011,6 +1061,55 @@ footer{
     position: relative!important;
     top: 20px!important;
     left: 90%!important;
+}
+.project-left-component .project-couple .project-couple-big .slideshow-container{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    margin: 2% 5%;
+    border-radius: 5px;
+    border: 1px solid var(--emerald);
+    overflow: hidden;
+}
+.project-left-component .project-couple .project-couple-big .slideshow-container .no-media{
+    text-align: center;
+    padding-top: 20px;
+    color: grey;
+    user-select: none;
+}
+.project-left-component .project-couple .project-couple-big .mySlides1{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.project-left-component .project-couple .project-couple-big .mySlides1 img{
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.project-left-component .project-couple .project-couple-big .slideshow-container .prev, .project-left-component .project-couple .project-couple-big .slideshow-container .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.project-left-component .project-couple .project-couple-big .slideshow-container .next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.project-left-component .project-couple .project-couple-big .slideshow-container .prev:hover, .project-left-component .project-couple .project-couple-big .slideshow-container .next:hover{
+    background-color: #f1f1f1;
+    color: black;
 }
 .project-right-component{
     width: 30%;
