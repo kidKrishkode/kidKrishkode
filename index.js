@@ -83,7 +83,9 @@ app.get('/varchar', async (req, res) => {
         projectByid: hex.projectByid.toString(),
         contributterByid: hex.contributterByid.toString(),
         rateChecker: hex.rateChecker.toString(),
-        rateToStarMaker: hex.rateToStarMaker.toString()
+        rateToStarMaker: hex.rateToStarMaker.toString(),
+        sliderImageMaker: hex.sliderImageMaker.toString(),
+        sortLang: hex.sortLang.toString()
     }});
 });
 
@@ -115,7 +117,7 @@ app.get('/projects/open', async (req, res) => {
     const productLib = jsonfile.readFileSync('./config/project.json');
     const project = hex.projectByid(id, productLib);
     const contributer = jsonfile.readFileSync('./config/user_contribute.json');
-    const code = project.code!=''?fs.readFileSync(path.join(__dirname, project.code)).toString()+'\n\n':'\nCode not avalible for this project\n\n';
+    const code = project.code!=''?project.code.startsWith('./')==true?fs.readFileSync(path.join(__dirname, project.code)).toString()+'\n\n':'External Code not permitted!\nAccess code from:\n'+project.code+"\n\n":'\nCode not avalible for this project\n\n';
 
     Promise.all(promises).then(([header]) => {
         res.status(200).render('project',{header, project, contributer, code});
