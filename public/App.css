@@ -761,10 +761,17 @@ footer{
 .product-component-info .more-component{
     width: 100%;
     margin: 10px 0px;
+    justify-content: space-between;
+    .flo{
+        justify-content: center;
+    }
 }
 .product-component-info .more-component .more{
     font-size: 16px;
     font-family: Consolas, 'Courier New', monospace;
+    width: 30%;
+    overflow: auto;
+    text-align: center;
 }
 .product-component-info .more-component .more i{
     margin-right: 5px;
@@ -1008,6 +1015,20 @@ footer{
     width: 70%;
     /* background: green; */
     padding: 2px;
+    .falier{
+        width: 90%;
+        height: 90%;
+        margin: 2% 5%;
+        border: 1px solid var(--emerald);
+        border-radius: 5px;
+        text-align: center;
+        padding: 20% 5px;
+        color: grey;
+    }
+    .falier:hover{
+        background: lightgray;
+        cursor: pointer;
+    }
 }
 .project-left-component .project-couple .project-couple-big iframe{
     width: 90%;
