@@ -28,7 +28,7 @@
                 <div class="project-logo"><%= project.name[0] %></div>
             </div>
             <div class="project-desc">
-                <%= project.description %>
+                <%= project.description.startsWith('https://github.com/')==true?locals.descriptionSet(project.description):project.description %>
             </div>
             <div class="reader">
                 <div class="btn btn-outline-success" id="reader" onclick="system.toggleDescSize('.project-desc');">Read More <i class="fa fa-long-arrow-down"></i></div>
@@ -74,8 +74,8 @@
                 </div>
                 <div class="tab-pane fade" id="nav-video" role="tabpanel" aria-labelledby="nav-video-tab">
                     <div class="project-couple flx">
-                        <div class="project-couple-big">
-                            <iframe src="#"></iframe>
+                        <div class="project-couple-big" id="video_support">
+                            
                         </div>
                         <div class="project-couple-small">
                             <div class="project-couple-icon"><i class="fa fa-video-camera"></i></div>
@@ -200,13 +200,31 @@
         document.querySelector('.rater').innerHTML = temp[1];
     },1000);
     setTimeout(()=>{
+        let code = `<%= code %>`;
+        let exec;
+        if(code.indexOf('https://github.com/')>=0 && code.startsWith('https://github.com/')){
+            let gitCaller = eval(config.hex.gitCaller);
+            let fileContent = gitCaller(code);
+            if(fileContent==null){
+                document.getElementById('sample-code-line').style.display = "none";
+                return;
+            }
+            exec = code.split('.')[code.split('.').length-1];
+            document.getElementById('sample-code').innerText = fileContent;
+        }
+        if(exec==undefined){
+            exec = '<%= exe %>';
+            if(exec==undefined||exec===''){
+                alert("No extension found with this code file!");
+            }
+        }
         system.toggleTab('nav-code-tab');
         let updateLine = eval(compiler.updateLineNumbers);
-        let gcCompiler = eval(compiler.gcCompiler);
-        let revers_gcCompiler = eval(compiler.revers_gcCompiler);
+        let highlighter = eval('compiler.'+eval(compiler.compilerAssigner)(exec).highlighter);
+        let parser = eval('compiler.'+eval(compiler.compilerAssigner)(exec).parser);
         let ideDeploy = eval(compiler.ideDeploy);
-        revers_gcCompiler('#sample-code');
-        gcCompiler('#sample-code');
+        eval(parser)('#sample-code');
+        eval(highlighter)('#sample-code');
         ideDeploy('#sample-code','#sample-code-line', updateLine);
     },1000);
     setTimeout(() => {
@@ -220,6 +238,15 @@
             showSlides(1, 0);
         }else{
             document.querySelector('.slideshow-container').innerHTML = "<div class='no-media'>No media provided for this project!</div>";
+        }
+    },1000);
+    setTimeout(()=>{
+        let vid_container = document.querySelector('#video_support');
+        let Video = "<%= project.video_support %>";
+        if(Video!=""){
+            vid_container.innerHTML = `<iframe src="${Video}" alt="load.." title="Tap to visite on full screen"></iframe>`;
+        }else{
+            vid_container.innerHTML = "<div class='falier'>Video support not provided for this project, Try another way!</div>";
         }
     },1000);
 </script>
