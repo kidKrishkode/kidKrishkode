@@ -19,14 +19,15 @@ module.exports = {
         if(id<=productLib.length && id>=0){
             let card = productLib[id].valueOf();
             let uid = card.id;
-            let name = card.name, desc = card.description, link = card.link, img = card.img=='#'?'../images/shape2.gif':'../assets/thumbnails/'+card.img;
+            let name = card.name, synp = card.synopsis, link = card.link, img = card.img=='#'?'../images/shape2.gif':'../assets/thumbnails/'+card.img;
             let modified = card.modified;
             let tags = module.exports.tagTohtml(card.tags);
             let rate = module.exports.rateBased(card.rating);
             let rating = module.exports.ratingTohtml(rate);
             let lang = module.exports.majorLang(card.language);
             let cost = card.cost==0?'Self':'Group';
-            return ([uid, name, desc, img, link, modified, tags, rate, rating, lang, cost]);
+            let type = card.type;
+            return ([uid, name, synp, img, link, modified, tags, rate, rating, lang, cost, type]);
         }else{
             return null;
         }
@@ -166,7 +167,7 @@ module.exports = {
     },
     sliderImageMaker: (list) => {
         let temp='';
-        console.log(list);
+        // console.log(list);
         if(list!=''){
             for(let i=0; i<list.length; i++){
                 temp += `<div class="mySlides1"><img src="${list[i]}" alt="Krishfolio"></div>`;
@@ -177,7 +178,34 @@ module.exports = {
             return null;
         }
     },
+    gitCaller: (link) => {
+        if(link.indexOf('https://github.com/')>=0){
+            link = link.replace('https://github.com/','https://api.github.com/repos/');
+            let file = link.lastIndexOf('/');
+            link = link.substring(0, file)+'/contents/'+link.substring(file+1);
+            if(link.startsWith('https://api.github.com/repos/')!=true) return null;
+            fetch(link).then(response => response.json()).then(data => {
+                const fileContent = atob(data.content);
+                return (fileContent);
+            }).catch((error)=>{
+                // console.error('>>> Error fetching file content:', error);
+                return null;
+            });
+        }else{
+            console.log("Provided url is not associate with github, check it.\n"+link);
+        }
+        return null;
+    },
+    descriptionSet: (desc) => {
+        if(desc.indexOf('https://github.com/')>=0){
+            let fileContent = module.exports.gitCaller(desc);
+            if(fileContent==null){
+                return 'Error: 503!\nDescription context fetching faild due to some network problem or security purpose.\n\n';
+            }
+            return fileContent;
+        }
+    },
     foo:() => {
         return 0;
-    }
+    },
 };

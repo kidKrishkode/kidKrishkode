@@ -6,6 +6,7 @@
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "synopsis": "",
         "cost": 0,
+        "type": 0,
         "rating": [0,0,2,0,0,0,5],
         "language": [
             {
@@ -15,7 +16,7 @@
         ],
         "screen_short": [],
         "tags": [],
-        "video_support": [],
+        "video_support": "",
         "info": {
             "upper":{
                 "Software_Model": "",
@@ -47,6 +48,7 @@
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "cost": 0,
+        "type": 0,
         "rating": [0,0,0,0,1,4,9],
         "language": [
             {
@@ -56,7 +58,7 @@
         ],
         "screen_short": [],
         "tags": ["Python", "Py", "Machine Learning", "Jupiter"],
-        "video_support": [],
+        "video_support": "",
         "info": {
             "upper":{
                 "Software_Model": "",
@@ -87,7 +89,8 @@
         "name": "Master Linked List in C",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
-        "cost": 1,
+        "cost": 0,
+        "type": 0,
         "rating": [0,0,2,0,0,0,5],
         "language": [
             {
@@ -97,7 +100,7 @@
         ],
         "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
         "tags": ["DSA", "C", "linkedlist", "Stack", "Queue", "DAA","structure", "pointer"],
-        "video_support": [],
+        "video_support": "",
         "info": {
             "upper":{
                 "Software_Model": "",
@@ -125,11 +128,12 @@
     },
     {
         "id": 3,
-        "img": "3.png",
+        "img": "4.png",
         "name": "Cavernous Hoax Scanner",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "cost": 1,
+        "type": 1,
         "rating": [0,0,1,0,0,7,5],
         "language": [
             {
@@ -163,7 +167,7 @@
         ],
         "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
         "tags": ["CHS", "deepfake detection", "machine learning", "JPEN", "final year project", "classification", "image compressor", "image converter", "image generator", "python", "devops"],
-        "video_support": [],
+        "video_support": "",
         "info": {
             "upper":{
                 "Software_Model": "Recursive Agile",
@@ -192,11 +196,12 @@
     },
     {
         "id": 4,
-        "img": "3.png",
+        "img": "5.png",
         "name": "ExamCall",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "cost": 0,
+        "type": 1,
         "rating": [0,0,2,0,0,6,4],
         "language": [
             {
@@ -222,7 +227,7 @@
         ],
         "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
         "tags": ["Exam", "UGC NET", "GATE", "UPSC", "MCQ", "MSQ", "exam taking system", "typescript", "JTEN", "javascript", "project"],
-        "video_support": [],
+        "video_support": "",
         "info": {
             "upper":{
                 "Software_Model": "Recursive Agile",
@@ -250,11 +255,12 @@
     },
     {
         "id": 5,
-        "img": "3.png",
+        "img": "6.png",
         "name": "Streamline Diagnosis",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "cost": 0,
+        "type": 1,
         "rating": [0,0,1,0,2,5,7],
         "language": [
             {
@@ -275,8 +281,8 @@
             }
         ],
         "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
-        "tags": ["Streamline", "oral diagnosis", "home doctor", "cancer", "diabetes", "lungs disease", "eye disease", "python", "logistic regression", "decision tree", "JPEN", "javascript", "project"],
-        "video_support": [],
+        "tags": ["Streamline", "oral diagnosis", "home doctor", "cancer", "diabetes", "lungs disease", "machine learning", "python", "logistic regression", "decision tree", "JPEN", "javascript", "project"],
+        "video_support": "",
         "info": {
             "upper":{
                 "Software_Model": "Recursive Agile",
@@ -303,11 +309,12 @@
     },
     {
         "id": 6,
-        "img": "3.png",
+        "img": "7.png",
         "name": "Calculator.github.io",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "cost": 0,
+        "type": 1,
         "rating": [0,0,0,0,0,1,10],
         "language": [
             {
@@ -325,7 +332,7 @@
         ],
         "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
         "tags": ["Calculator", "simple calculator", "basic project", "html", "frontend", "css", "bootstrap css", "javascript project"],
-        "video_support": [],
+        "video_support": "",
         "info": {
             "upper":{
                 "Software_Model": "",
@@ -351,11 +358,12 @@
     },
     {
         "id": 7,
-        "img": "3.png",
+        "img": "8.png",
         "name": "Clock",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
         "cost": 0,
+        "type": 1,
         "rating": [0,0,1,0,2,0,9],
         "language": [
             {
@@ -373,7 +381,7 @@
         ],
         "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
         "tags": ["Clock", "analog clock", "digital clock", "html", "frontend", "css", "bootstrap css", "javascript project"],
-        "video_support": [],
+        "video_support": "",
         "info": {
             "upper":{
                 "Software_Model": "",
@@ -397,5 +405,106 @@
         "modified": "27/01/25",
         "code": "https://github.com/kidKrishkode/Clock.github.io",
         "link": ["https://github.com/kidKrishkode/Clock.github.io"]
+    },
+    {
+        "id": 8,
+        "img": "9.png",
+        "name": "Nanonium",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "cost": 0,
+        "type": 1,
+        "rating": [0,0,0,0,0,13,24],
+        "language": [
+            {
+                "name": "HTML",
+                "parcentage": 47.1
+            },
+            {
+                "name": "JavaScript",
+                "parcentage": 25.7
+            },
+            {
+                "name": "CSS",
+                "parcentage": 27.2
+            }
+        ],
+        "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
+        "tags": ["nanonium chat app", "sql chat bot", "sqlgpt", "machine learning", "python", "JPEN", "sql query", "llm", "database"],
+        "video_support": "",
+        "info": {
+            "upper":{
+                "Software_Model": "Recursive Agile",
+                "Framework": "HexJs",
+                "Stack_Technology": "JPEN",
+                "Database": "Json",
+                "API": "",
+                "License": "MIT"
+            },
+            "lower":{
+                "Version_Support": "1.0",
+                "Interface": "Avalible",
+                "Aditional_Security": "Not Provided",
+                "Inspired_By": ""
+            }
+        },
+        "contributter": [],
+        "deployment": {
+            "gitpage": 1,
+            "production": 1
+        },
+        "modified": "27/01/25",
+        "code": "https://github.com/kidKrishkode/Nanonium.github.io",
+        "link": ["https://github.com/kidKrishkode/Nanonium.github.io"]
+    },
+    {
+        "id": 9,
+        "img": "10.png",
+        "name": "Weather by WHITE LOTUS",
+        "description": "https://github.com/whitelotus4/weatherbywhitelotus.github.io/",
+        "synopsis": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ducimus. Culpa soluta hic itaque debitis natus repudiandae inventore excepturi provident omnis quisquam qui nisi, temporibus porro alias corrupti iste fugit? Fuga nostrum",
+        "cost": 1,
+        "type": 1,
+        "rating": [0,0,1,0,0,0,4],
+        "language": [
+            {
+                "name": "HTML",
+                "parcentage": 47.1
+            },
+            {
+                "name": "JavaScript",
+                "parcentage": 25.7
+            },
+            {
+                "name": "CSS",
+                "parcentage": 27.2
+            }
+        ],
+        "screen_short": ["../assets/thumbnails/1.png", "../assets/thumbnails/2.png", "../assets/thumbnails/3.png"],
+        "tags": ["weather", "openweather", "white lotus", "hackthon", "weather forcast", "css", "bootstrap css", "javascript project"],
+        "video_support": "",
+        "info": {
+            "upper":{
+                "Software_Model": "Waterfall",
+                "Framework": "Bootstrap",
+                "Stack_Technology": "",
+                "Database": "",
+                "API": "RESTAPI",
+                "License": "MIT"
+            },
+            "lower":{
+                "Version_Support": "1.0",
+                "Interface": "Avalible",
+                "Aditional_Security": "Not Provided",
+                "Inspired_By": ""
+            }
+        },
+        "contributter": [],
+        "deployment": {
+            "gitpage": 1
+        },
+        "modified": "27/01/25",
+        "code": "https://github.com/whitelotus4/weatherbywhitelotus.github.io/index.c",
+        "link": ["https://github.com/whitelotus4/weatherbywhitelotus.github.io/"]
     }
 ]

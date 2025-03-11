@@ -398,6 +398,19 @@ module.exports = {
         frog = codeText;
         document.querySelector(fieldName).innerText = frog;
     },
+    compilerAssigner: (exe) => {
+        let exe_list = [
+            {'exe': 'c', 'highlighter': 'gcCompiler', 'parser': 'revers_gcCompiler'},
+            {'exe': 'py', 'highlighter': 'pyInterpreter', 'parser': 'reverse_pyInterpreter'},
+            {'exe': 'js', 'highlighter': 'jsCompiler', 'parser': 'reverse_jsCompiler'}
+        ];
+        for(let i=0; i<exe_list.length; i++){
+            if(exe==exe_list[i].exe){
+                return exe_list[i];
+            }
+        }
+        return null;
+    },
     foo: () => {
         console.log('Bonzai!');
         let codeElement = eval(this.gcCompiler.toString());
