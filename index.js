@@ -6,12 +6,29 @@ const bodyParser = require('body-parser');
 const querystring = require('querystring');
 const ejs = require('ejs');
 const jsonfile = require('jsonfile');
-const varchar = require('./config/env-variables.ts');
-const security = require('./config/security.ts');
-const hex = require('./config/hex.ts');
-const compiler = require('./config/compiler.ts');
+let varchar, security, hex, compiler;
+try{
+    varchar = require('./config/env-variables');
+    security = require('./config/security');
+    hex = require('./config/hex');
+    compiler = require('./config/compiler');
+}catch(e){
+    varchar = require('./config/env-variables.ts');
+    security = require('./config/security.ts');
+    hex = require('./config/hex.ts');
+    compiler = require('./config/compiler.ts');
+}
 require('./public/App.test.js');
 require('dotenv').config();
+
+class WEB{
+    constructor(port){
+        this.active = true;
+        this.port = port;
+        this.filename = path.basename(__filename);
+        this.appInfo = jsonfile.readFileSync('./public/manifest.json');   
+    }
+}
 
 const app = express();
 let server = http.createServer(app);
@@ -85,7 +102,8 @@ app.get('/varchar', async (req, res) => {
         rateChecker: hex.rateChecker.toString(),
         rateToStarMaker: hex.rateToStarMaker.toString(),
         sliderImageMaker: hex.sliderImageMaker.toString(),
-        sortLang: hex.sortLang.toString()
+        sortLang: hex.sortLang.toString(),
+        gitCaller: hex.gitCaller.toString()
     }});
 });
 
@@ -98,6 +116,7 @@ app.get('/compiler', async (req, res) => {
         pyInterpreter: compiler.pyInterpreter.toString(),
         gcCompiler: compiler.gcCompiler.toString(),
         revers_gcCompiler: compiler.revers_gcCompiler.toString(),
+        compilerAssigner: compiler.compilerAssigner.toString(),
         foo: compiler.foo.toString()
     }});
 });
@@ -117,10 +136,11 @@ app.get('/projects/open', async (req, res) => {
     const productLib = jsonfile.readFileSync('./config/project.json');
     const project = hex.projectByid(id, productLib);
     const contributer = jsonfile.readFileSync('./config/user_contribute.json');
-    const code = project.code!=''?project.code.startsWith('./')==true?fs.readFileSync(path.join(__dirname, project.code)).toString()+'\n\n':'External Code not permitted!\nAccess code from:\n'+project.code+"\n\n":'\nCode not avalible for this project\n\n';
+    const code = project.code!=''?project.code.startsWith('./')==true?fs.readFileSync(path.join(__dirname, project.code)).toString()+'\n\n':'Error: 503!\nExternal Code fetch not possible due to network gateway or securty purpose!\nAccess code from:\n'+project.code+"\n\n":'\nCode not avalible for this project\n\n';
+    const exe = project.code.startsWith('./')==true?project.code.split('.')[project.code.split('.').length-1]:'';
 
     Promise.all(promises).then(([header]) => {
-        res.status(200).render('project',{header, project, contributer, code});
+        res.status(200).render('project',{header, project, contributer, code, exe, descriptionSet: hex.descriptionSet});
     });
 });
 
@@ -153,12 +173,6 @@ app.get('/about', (req, res) => {
     });
 });
 
-function WEB(port){
-    this.active = true;
-    this.port = port;
-    this.filename = path.basename(__filename);
-    this.appInfo = jsonfile.readFileSync('./public/manifest.json');
-}
 
 WEB.prototype.getAge = function(time){
     return (new Date().getFullYear()) - ((time[0]*1000)+(time[1]*100)+(time[2]*10)+(time[3]*1));
@@ -216,10 +230,11 @@ WEB.prototype.productSwapper = function(productLib){
 }
 
 WEB.prototype.productCardMaker = async function(id, productLib){
+    let field = jsonfile.readFileSync('./config/project_field.json');
     let card = hex.productCardMaker(id, productLib);
     if(card != null){
-        [id, name, desc, img, link, modified, tags, rate, rating, lang, cost] = card;
-        const layout = await ejs.renderFile('./views/card.ejs',{id, name, desc, img, link, modified, tags, rate, rating, lang, cost});
+        [id, name, synp, img, link, modified, tags, rate, rating, lang, cost, type] = card;
+        const layout = await ejs.renderFile('./views/card.ejs',{id, name, synp, img, link, modified, tags, rate, rating, lang, cost, type: field[type].name});
         return (layout.toString());
     }else{
         return null;
