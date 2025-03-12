@@ -178,21 +178,24 @@ module.exports = {
             return null;
         }
     },
-    gitCaller: (link) => {
-        if(link.indexOf('https://github.com/')>=0){
-            link = link.replace('https://github.com/','https://api.github.com/repos/');
+    gitCaller: async (link) => {
+        if(link.indexOf('https://github.com/') >= 0){
+            link = link.replace('https://github.com/', 'https://api.github.com/repos/');
             let file = link.lastIndexOf('/');
-            link = link.substring(0, file)+'/contents/'+link.substring(file+1);
-            if(link.startsWith('https://api.github.com/repos/')!=true) return null;
-            fetch(link).then(response => response.json()).then(data => {
+            link = link.substring(0, file) + '/contents/' + link.substring(file + 1);
+            console.log(link);
+            if(link.startsWith('https://api.github.com/repos/') != true) return null;
+            try{
+                const response = await fetch(link);
+                const data = await response.json();
                 const fileContent = atob(data.content);
-                return (fileContent);
-            }).catch((error)=>{
-                // console.error('>>> Error fetching file content:', error);
+                return fileContent;
+            }catch(error){
+                console.error('>>> Error fetching file content:', error);
                 return null;
-            });
+            }
         }else{
-            console.log("Provided url is not associate with github, check it.\n"+link);
+            console.log("Provided url is not associate with github, check it.\n" + link);
         }
         return null;
     },
