@@ -204,13 +204,16 @@
         let exec;
         if(code.indexOf('https://github.com/')>=0 && code.startsWith('https://github.com/')){
             let gitCaller = eval(config.hex.gitCaller);
-            let fileContent = gitCaller(code);
+            gitCaller(code).then(content => 
+                document.getElementById('sample-code').textContent = content
+            ).catch(error => console.error("Error: " + error));
+            let fileContent = document.getElementById('sample-code').innerText;
             if(fileContent==null){
                 document.getElementById('sample-code-line').style.display = "none";
+                document.getElementById('sample-code').innerText = "Error: 503!\nExternal Code fetch not possible due to network gateway or securty purpose!\nAccess code from:\n"+document.getElementById('sample-code').textContent;
                 return;
             }
             exec = code.split('.')[code.split('.').length-1];
-            document.getElementById('sample-code').innerText = fileContent;
         }
         if(exec==undefined){
             exec = '<%= exe %>';
@@ -223,9 +226,11 @@
         let highlighter = eval('compiler.'+eval(compiler.compilerAssigner)(exec).highlighter);
         let parser = eval('compiler.'+eval(compiler.compilerAssigner)(exec).parser);
         let ideDeploy = eval(compiler.ideDeploy);
-        eval(parser)('#sample-code');
-        eval(highlighter)('#sample-code');
-        ideDeploy('#sample-code','#sample-code-line', updateLine);
+        setTimeout(()=>{
+            eval(parser)('#sample-code');
+            eval(highlighter)('#sample-code');
+            ideDeploy('#sample-code','#sample-code-line', updateLine);
+        },2000);
     },1000);
     setTimeout(() => {
         let imagelist = "<%= project.screen_short %>";
