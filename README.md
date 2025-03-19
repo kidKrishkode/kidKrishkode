@@ -1,10 +1,10 @@
-# ✨ KrishFolio – The Digital Portfolio of Krishnendu Mitra 🌐  
+# ✨ kidKrishkode – The Digital Portfolio of Krishnendu Mitra 🌐  
 
 ## About Me 👨‍💻  
 
-Welcome to **KrishFolio**, my personal **digital portfolio**! I’m **Krishnendu Mitra**, a passionate **Full-Stack Web Developer with Machine Learning**. With expertise in **JPEN/JPRN/MERN stack** technology, I specialize in building scalable web applications, AI-powered solutions, and robust backend systems.  
+Welcome to **kidKrishkode**, my personal **digital portfolio**! I’m **Krishnendu Mitra**, a passionate **Full-Stack Web Developer with Machine Learning**. With expertise in **JPEN/JPRN/MERN stack** technology, I specialize in building scalable web applications, AI-powered solutions, and robust backend systems.  
 
-This platform serves as a **one-stop destination** for HR professionals, clients, and companies to explore my **work, skills, and professional journey**. Whether you’re looking for **my past projects, current developments, services, or expertise**, KrishFolio provides everything you need to assess my capabilities and contributions.  
+This platform serves as a **one-stop destination** for HR professionals, clients, and companies to explore my **work, skills, and professional journey**. Whether you’re looking for **my past projects, current developments, services, or expertise**, kidKrishkode provides everything you need to assess my capabilities and contributions.  
 
 ## 🔥 Featured Sections  
 
@@ -27,13 +27,13 @@ Beyond individual work, I collaborate with a **skilled team of experts** to deli
 
 ## 🌍 Technology Stack  
 
-KrishFolio is **built on the JPEN Stack**, combining:  
+kidKrishkode is **built on the JPEN Stack**, combining:  
 - **JSON** – Efficient data handling & storage  
 - **Python** – AI & ML model development  
 - **Embedded JavaScript (EJS)** – Interactive frontend experience  
 - **Node.js** – Scalable backend architecture  
 
-## 🎯 Why KrishFolio?  
+## 🎯 Why kidKrishkode?  
 
 - **Professional & Transparent** – A structured portfolio for HRs & clients  
 - **Expertise-Driven Services** – Covering diverse fields from **ML to Web Development**  
@@ -47,4 +47,4 @@ For **business inquiries, collaborations, or hiring opportunities**:
 - 💼 **LinkedIn**: [Krishnendu Mitra](https://www.linkedin.com/in/krishnendu-mitra)  
 - 🌐 **Instagrame**: [kidKrishkode](https://instagrame.com/kidkrishkode01)  
 
-Thank you for visiting **KrishFolio**! Let’s build something incredible together. 🚀
+Thank you for visiting **kidKrishkode**! Let’s build something incredible together. 🚀
