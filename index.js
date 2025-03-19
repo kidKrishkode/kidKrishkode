@@ -33,7 +33,7 @@ class WEB{
 const app = express();
 let server = http.createServer(app);
 const PORT = process.env.PORT || 3000;
-const AppName = "Krishfolio";
+const AppName = "kidKrishkode";
 let web = new WEB(PORT);
 
 app.set('view engine', 'ejs');
@@ -47,7 +47,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
-    try{
+    //try{
         const url = req.originalUrl;
         const query = url.split('?')[1];
         const params = (new URL(path.join(__dirname, url))).searchParams;
@@ -70,9 +70,9 @@ app.use((req, res, next) => {
             // res.status(422).render('notfound',{error: 422, message: "Your browser is outdated and may not support certain features. Please upgrade to a modern browser."});
         }
         next();
-    }catch(e){
+  /*  }catch(e){
         res.status(401).render('notfound',{error: 401, message: "Unauthorize entry not allow, check the source or report it"});
-    }
+    }*/
 });
 
 const promises = [
