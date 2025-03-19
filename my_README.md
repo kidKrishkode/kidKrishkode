@@ -1,5 +1,3 @@
-<!-- This is a private README, not for public profile display -->
-
 # ✨ kidKrishkode – The Digital Portfolio of Krishnendu Mitra 🌐  
 
 ## About Me 👨‍💻  
