@@ -1,4 +1,4 @@
-# ✨ kidKrishkode – The Digital Portfolio of Krishnendu Mitra 🌐  
+# ✨ kidKrishkode – The Digital Signature of Krishnendu Mitra 🌐  
 
 ## About Me 👨‍💻  
 
