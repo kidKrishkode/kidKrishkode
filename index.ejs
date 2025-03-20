@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="../public/logo.png" name="og:image">
+    <meta content="Krish, Innovative and task-driven full-stack web developer with 6+ years of hands-on programming experience. Specializing in machine learning-powered web solutions.." lang="en-us" name="description">
+    <meta content="kidKrishkode, Krish Portfolio, kidkrishkode, Krishnendu, Fullsatck web developer, Website, project, Hire, WHITE LOTUS" lang="en-us" name="keywords">
+    <title version="1.0">kidKrishkode</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/App.css"/>
+    <link rel="icon" href="../public/favicon.ico"/>
+</head>
+<body onload="user();" class="not-notes">
+    <header id="header">
+        <%= header %>
+    </header>
+    <section id="home" class="workspace">
+        <div class="home-body flo">
+            <div class="home-body-left">
+                <h3>Ahoy hoy cool <span>visitors</span>!</h3>
+                <h2>I'm <span>Krish</span>, Web Developer & AI Prompt Engineer</h2>
+                <p>Innovative and task-driven full-stack web developer with 6+ years of hands-on programming experience. Specializing in machine learning-powered web solutions, I excel in building dynamic interfaces, optimizing databases, and enhancing user experiences.</p>
+                <div class="flo">
+                    <button class="btn btn-primary" onclick="route('./')">Hire Me</button>
+                    <button class="btn btn-outline-primary">About Me..</button>
+                </div>
+                <div class="social-icon flo">
+                    <div class="round-icon" onclick="route('https:/\/facebook.com/share/1F8qkBYGFQ');"><i class="fa fa-facebook"></i></div>
+                    <div class="round-icon" onclick="route('https:/\/instagram.com/kidKrishkode01');"><i class="fa fa-instagram"></i></div>
+                    <div class="round-icon" onclick="route('https:/\/github.com/kidKrishkode');"><i class="fa fa-github"></i></div>
+                    <div class="round-icon" onclick="route('https:/\/linkedin.com/in/krishnendu-mitra');"><i class="fa fa-linkedin"></i></div>
+                    <div class="round-icon" onclick="route('https:/\/youtube.com/@kidKrishkode');"><i class="fa fa-youtube-play"></i></div>
+                </div>
+            </div>
+            <div class="home-body-right">
+                <div class="scratch">
+                    <div class="image">
+                    </div>
+                    <div class="temp"></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgb(12, 143, 240, 0.7)" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgb(34, 87, 122, 0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(82, 137, 255, 0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(120, 72, 165, 0.6)" />
+                    </g>
+                </svg>
+            </div>
+            <div class="content">
+                <div class="container flo">
+                    <img src="../public/logo1500.png" width="20" height="20" alt="loade">
+                    <h6>kidKrishkode</h6>
+                </div>
+            </div>       
+        </footer>
+    </section>
+    <section class="workspace blbg" id="side-menu" onclick="navbar_toggle();"></section>
+    <div class="dots top-dots"></div>
+    <div class="dots bottom-dots"></div>
+</body>
+<script src="../public/App.js"></script>
+<script>
+    pageSet.push('header');
+    currentPage.push('');
+    document.getElementById('header').innerHTML = document.getElementById('header').textContent;
+</script>
+</html>
