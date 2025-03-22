@@ -65,15 +65,15 @@ app.use((req, res, next) => {
                 req.query = querystring.parse(encodedUrl);
             }
         }
-        // const my_browser = security.browser(req.headers);
-        // if(!security.validBrowser([my_browser[0], my_browser[1].split('.')[0]*1], varchar.browser_data)){
-        //     // res.status(422).render('notfound',{error: 422, message: "Your browser is outdated and may not support certain features. Please upgrade to a modern browser."});
-        // }
+        const my_browser = security.browser(req.headers);
+        if(!security.validBrowser([my_browser[0], my_browser[1].split('.')[0]*1], varchar.browser_data)){
+            // res.status(422).render('notfound',{error: 422, message: "Your browser is outdated and may not support certain features. Please upgrade to a modern browser."});
+        }
         next();
     }catch(e){
-        res.status(401).render('notfound',{error: 401, message: "Unauthorize entry not allow, check the source or report it "+e});
+        res.status(401).render('notfound',{error: 401, message: "Unauthorize entry not allow, check the source or report it"});
     }*/
-    next();
+   next();
 });
 
 const promises = [
@@ -137,7 +137,7 @@ app.get('/projects/open', async (req, res) => {
     const productLib = jsonfile.readFileSync('./config/project.json');
     const project = hex.projectByid(id, productLib);
     const contributer = jsonfile.readFileSync('./config/user_contribute.json');
-    const code = project.code!=''?project.code.startsWith('./')==true?fs.readFileSync(path.join(__dirname, project.code)).toString()+'\n\n':'Error: 503!\nExternal Code fetch not possible due to network gateway or securty purpose!\nAccess code from:\n'+project.code+"\n\n":'\nCode not avalible for this project\n\n';
+    const code = project.code!=''?project.code.startsWith('https://github.com/')==true?project.code:project.code.startsWith('./')==true?fs.readFileSync(path.join(__dirname, project.code)).toString()+'\n\n':'Error: 503!\nInternal Code fetch not possible due to network gateway or securty purpose!\nAccess code from:\n'+project.code+"\n\n":'\nCode not avalible for this project\n\n';
     const exe = project.code.startsWith('./')==true?project.code.split('.')[project.code.split('.').length-1]:'';
 
     Promise.all(promises).then(([header]) => {
@@ -165,6 +165,12 @@ app.get('/contributter', (req, res) => {
     ];
     Promise.all(promises).then(([profile]) => {
         res.status(200).json({profile});
+    });
+});
+
+app.get('/services', async (req, res) => {
+    Promise.all(promises).then(([header]) => {
+        res.status(200).render('services',{header});
     });
 });
 
