@@ -39,6 +39,7 @@ let web = new WEB(PORT);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+app.use('/config',express.static(path.join(__dirname,'config')));
 app.use('/images',express.static(path.join(__dirname,'images')));
 app.use('/public',express.static(path.join(__dirname,'public')));
 app.use('/assets',express.static(path.join(__dirname,'assets')));
