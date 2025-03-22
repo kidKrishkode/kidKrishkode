@@ -65,13 +65,13 @@ app.use((req, res, next) => {
                 req.query = querystring.parse(encodedUrl);
             }
         }
-        const my_browser = security.browser(req.headers);
-        if(!security.validBrowser([my_browser[0], my_browser[1].split('.')[0]*1], varchar.browser_data)){
-            // res.status(422).render('notfound',{error: 422, message: "Your browser is outdated and may not support certain features. Please upgrade to a modern browser."});
-        }
+        // const my_browser = security.browser(req.headers);
+        // if(!security.validBrowser([my_browser[0], my_browser[1].split('.')[0]*1], varchar.browser_data)){
+        //     // res.status(422).render('notfound',{error: 422, message: "Your browser is outdated and may not support certain features. Please upgrade to a modern browser."});
+        // }
         next();
     }catch(e){
-        res.status(401).render('notfound',{error: 401, message: "Unauthorize entry not allow, check the source or report it"});
+        res.status(401).render('notfound',{error: 401, message: "Unauthorize entry not allow, check the source or report it "+e});
     }
 });
 
