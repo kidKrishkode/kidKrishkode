@@ -61,6 +61,12 @@ html{
 .nav-link:hover{
     color: var(--emerald)!important;
 }
+.navbar-toggler{
+    border-color: gray!important;
+    .navbar-toggler-icon{
+        filter: contrast(0.5);
+    }
+}
 .active{
     color: grey!important;
 }
@@ -752,6 +758,7 @@ footer{
 }
 .product-component-info .rating i{
     font-size: 20px;
+    margin-right: 3px;
 }
 .product-component-info .rating .rate{
     font-size: 16px;
@@ -929,7 +936,7 @@ footer{
 .null{
     color: gray;
 }
-#project{
+#project, #services{
     max-height: 90vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
@@ -1518,7 +1525,7 @@ footer{
     margin-top: 10px;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px), only screen and (min-width: 900px) and (max-width: 1200px){
     .navbar img{
         width: 25px;
         height: 25px;
