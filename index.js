@@ -48,7 +48,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
-    /*try{
+    try{
         const url = req.originalUrl;
         const query = url.split('?')[1];
         const params = (new URL(path.join(__dirname, url))).searchParams;
@@ -73,8 +73,7 @@ app.use((req, res, next) => {
         next();
     }catch(e){
         res.status(401).render('notfound',{error: 401, message: "Unauthorize entry not allow, check the source or report it"});
-    }*/
-   next();
+    }
 });
 
 const promises = [
