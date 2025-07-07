@@ -13,6 +13,9 @@
 .grn{
     color: #00AAA2;
 }
+.cgrn{
+    color: green;
+}
 .gld{
     color: goldenrod;
 }
@@ -23,7 +26,7 @@
     color: gray;
 }
 .str{
-    color: #a75b38;
+    color: #c39178;
 }
 .bg_red{
     display: inherit;

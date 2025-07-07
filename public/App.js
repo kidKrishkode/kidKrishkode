@@ -60,7 +60,7 @@ Loader.prototype.creat = function(){
     if(loader.loaded!=false){
         const loaderEle = document.createElement('section');
         loaderEle.classList.add("loading");
-        loaderEle.innerHTML = `<div class="loader"></div><div class="loader reversloder"></div><div class="loaderhead">Krishfolio</div>`;
+        loaderEle.innerHTML = `<div class="loader"></div><div class="loader reversloder"></div><div class="loaderhead">kidKrishkode</div>`;
         document.body.appendChild(loaderEle);
     }
 }
