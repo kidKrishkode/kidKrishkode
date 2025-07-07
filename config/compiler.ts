@@ -107,10 +107,13 @@ module.exports = {
         //console.log(frog);
         frog = frog.replaceAll("s|", `<span class='sky'>`);
         frog = frog.replaceAll("f|", `<span class='org'>`);
+        frog = frog.replaceAll("g|", `<span class='grn'>`);
+        frog = frog.replaceAll(" |n", `|n`);
         frog = frog.replaceAll("|n", `</span>`);
         frog = frog.replaceAll(`function`, `<span class='blu'>function</span><span class='org'>`);
         frog = frog.replaceAll(`/(`, `</span>(<span class='gry'>`);
         frog = frog.replaceAll(`){`, `</span>){`);
+        frog = frog.replaceAll(`public@`, `<span class='prp'>public</span>`);
         frog = frog.replaceAll(`var@`, `<span class='prp'>var</span>`);
         frog = frog.replaceAll(`let@`, `<span class='blu'>let</span>`);
         frog = frog.replaceAll(`const@`, `<span class='blu'>const</span>`);
@@ -124,9 +127,9 @@ module.exports = {
         frog = frog.replaceAll(`do@`, `<span class='blu'>do</span>`);
         frog = frog.replaceAll(`return@`, `<span class='blu'>return</span>`);
         frog = frog.replaceAll(`async@`, `<span class='blu'>async</span>`);
-        frog = frog.replaceAll(`if@`, `<span class='blu'>if</span>`);
-        frog = frog.replaceAll(`else@`, `<span class='blu'>else</span>`);
-        frog = frog.replaceAll(`else if@`, `<span class='blu'>else if</span>`);
+        frog = frog.replaceAll(`if@`, `<span class='prp'>if</span>`);
+        frog = frog.replaceAll(`else@`, `<span class='prp'>else</span>`);
+        frog = frog.replaceAll(`else if@`, `<span class='prp'>else if</span>`);
         frog = frog.replaceAll(`import@`, `<span class='prp'>import</span>`);
         frog = frog.replaceAll(`from@`, `<span class='prp'>from</span>`);
         frog = frog.replaceAll(`export@`, `<span class='prp'>export</span>`);
@@ -138,8 +141,8 @@ module.exports = {
         frog = frog.replaceAll(`s'`, `<span class='gld'>'`);
         frog = frog.replaceAll(`'n`, `'</span>`);
         frog = frog.replaceAll(`//n`, `</span>`);
-        frog = frog.replaceAll(`//`, `<span class='grn'>//`);
-        frog = frog.replaceAll(`/*`, `<span class='grn'>/*`);
+        frog = frog.replaceAll(`//`, `<span class='cgrn'>//`);
+        frog = frog.replaceAll(`/*`, `<span class='cgrn'>/*`);
         frog = frog.replaceAll(`*/`, `*/</span>`);
         frog = frog.replaceAll(`await@`, `<span class='prp'>await</span>`);
         frog = frog.replaceAll(`window@`, `<span class='prp'>window</span>`);
@@ -158,11 +161,12 @@ module.exports = {
         frog = frog.replaceAll(`then@`, `<span class='org'>then</span>`);
         frog = frog.replaceAll(`==`, `<span class='sky'>==</span>`);
         frog = frog.replaceAll(`!=`, `<span class='sky'>!=</span>`);
-        frog = frog.replaceAll(`&gt;`, `<span class='sky'>&gt;</span>`);
-        frog = frog.replaceAll(`&lt;`, `<span class='sky'>&lt;</span>`);
+        // frog = frog.replaceAll(`&gt;`, `<span class='sky'>&gt;</span>`);
+        // frog = frog.replaceAll(`&lt;`, `<span class='sky'>&lt;</span>`);
         frog = frog.replaceAll(`=<span class='sky'>&gt;</span>`, `<span class='blu'>=></span>`);
+        frog = frog.replaceAll(`=&gt;`, `<span class='blu'>=></span>`);
         frog = frog.replaceAll(`+`, `<span class='sky'>+</span>`);
-        frog = frog.replaceAll(`-`, `<span class='sky'>-</span>`);
+        // frog = frog.replaceAll(`-`, `<span class='sky'>-</span>`);
         frog = frog.replaceAll(`classe`, `<span class='sky'>class</span>`);
         frog = frog.replaceAll(`document@`, `<span class='red'>document</span>`);
         frog = frog.replaceAll(`&amp;&amp;`, `<span class='red'>&&</span>`);
@@ -224,7 +228,7 @@ module.exports = {
         frog = frog.replaceAll(`null@`, `<span class='blu'>null</span>`);
         frog = frog.replaceAll(`for@`, `<span class='blu'>for</span>`);
         frog = frog.replaceAll(`while@`, `<span class='blu'>while</span>`);
-        frog = frog.replaceAll(`return@`, `<span class='blu'>return</span>`);
+        frog = frog.replaceAll(`return@`, `<span class='prp'>return</span>`);
         frog = frog.replaceAll(`if@`, `<span class='blu'>if</span>`);
         frog = frog.replaceAll(`else@`, `<span class='blu'>else</span>`);
         frog = frog.replaceAll(`else if@`, `<span class='blu'>else if</span>`);
@@ -232,6 +236,7 @@ module.exports = {
         frog = frog.replaceAll(`from@`, `<span class='prp'>from</span>`);
         frog = frog.replaceAll(`export@`, `<span class='prp'>export</span>`);
         frog = frog.replaceAll(`default@`, `<span class='prp'>default</span>`);
+        frog = frog.replaceAll(`print@`, `<span class='prp'>print</span>`);
         frog = frog.replaceAll(`try@`, `<span class='prp'>try</span>`);
         frog = frog.replaceAll(`catch@`, `<span class='prp'>catch</span>`);
         frog = frog.replaceAll(`str@`, `<span class='grn'>str</span>`);
@@ -244,9 +249,11 @@ module.exports = {
         frog = frog.replaceAll(`s'`, `<span class='gld'>'`);
         frog = frog.replaceAll(`'n`, `'</span>`);
         frog = frog.replaceAll(`//n`, `</span>`);
-        frog = frog.replaceAll(`//`, `<span class='grn'>//`);
-        frog = frog.replaceAll(`/*`, `<span class='grn'>/*`);
+        frog = frog.replaceAll(`//`, `<span class='cgrn'>//`);
+        frog = frog.replaceAll(`/*`, `<span class='cgrn'>/*`);
         frog = frog.replaceAll(`*/`, `*/</span>`);
+        frog = frog.replaceAll(`#n`, `</span>`);
+        frog = frog.replaceAll(`#`, `<span class='cgrn'>#`);
         frog = frog.replaceAll(`new@`, `<span class='prp'>new</span>`);
         frog = frog.replaceAll(`Date@`, `<span class='prp'>Date</span>`);
         frog = frog.replaceAll(`Array@`, `<span class='prp'>Array</span>`);
@@ -356,9 +363,9 @@ module.exports = {
         frog = frog.replaceAll(`'n`, `'</span>`);
         //comment color change
         frog = frog.replaceAll(`//n`, `</span>`);
-        frog = frog.replaceAll(`//`, `<span class='grn'>//`);
+        frog = frog.replaceAll(`//`, `<span class='cgrn'>//`);
         frog = frog.replaceAll(`<span class='red'>*</span>/`, `*/</span>`);
-        frog = frog.replaceAll(`/<span class='red'>*</span>`, `<span class='grn'>/*`);
+        frog = frog.replaceAll(`/<span class='red'>*</span>`, `<span class='cgrn'>/*`);
         document.querySelector(fieldName).innerHTML = frog;
     },
     revers_gcCompiler: (fieldName) => {
@@ -413,7 +420,7 @@ module.exports = {
     },
     foo: () => {
         console.log('Bonzai!');
-        let codeElement = eval(this.gcCompiler.toString());
+        let codeElement = eval(String(this.gcCompiler).toString());
         console.log(codeElement);
     }
 };
