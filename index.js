@@ -48,11 +48,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
-    //try{
+    try{
         const url = req.originalUrl;
         const query = url.split('?')[1];
-        const baseURL = req.protocol + '://' + req.get('host');
-        const params = new URL(url, baseURL).searchParams;
+        const params = (new URL(path.join(__dirname, url))).searchParams;
         const public_key = varchar.duplex;
         if(params.has('encode')){
             if(query!=undefined){
@@ -67,14 +66,15 @@ app.use((req, res, next) => {
                 req.query = querystring.parse(encodedUrl);
             }
         }
-        /*const my_browser = security.browser(req.headers);
-        if(!security.validBrowser([my_browser[0], my_browser[1].split('.')[0]*1], varchar.browser_data) && hex.isHosted(req)){
-            res.status(422).render('notfound',{error: 422, message: "Your browser is outdated and may not support certain features. Please upgrade to a modern browser."});
-        }*/
+        const my_browser = security.browser(req.headers);
+        if(!security.validBrowser([my_browser[0], my_browser[1].split('.')[0]*1], varchar.browser_data)){
+            // res.status(422).render('notfound',{error: 422, message: "Your browser is outdated and may not support certain features. Please upgrade to a modern browser."});
+        }
         next();
-    /*}catch(e){
+    }catch(e){
         res.status(401).render('notfound',{error: 401, message: "Unauthorize entry not allow, check the source or report it"});
-    }*/
+    }
+//    next();
 });
 
 const promises = [
@@ -124,7 +124,7 @@ app.get('/compiler', async (req, res) => {
 });
 
 app.get('/projects', async (req, res) => {
-    productList = await web.ProductListMaker();
+    const productList = await web.ProductListMaker();
     Promise.all(promises).then(([header]) => {
         res.status(200).render('projects',{header, productList});
     });
