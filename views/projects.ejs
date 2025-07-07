@@ -61,5 +61,13 @@ try{
             document.querySelectorAll('.icon')[i].innerHTML = document.querySelectorAll('.icon')[i].textContent;
         }
     },1000);
+    setTimeout(()=>{
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchParam = urlParams.get('search');
+        if(searchParam!=null){
+            document.getElementById("searchData").value = searchParam;
+            search_product('searchData','drop');
+        }
+    },1000);
 </script>
 </html>
