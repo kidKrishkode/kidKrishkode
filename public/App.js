@@ -208,6 +208,15 @@ function search_product(data,list){
         document.getElementById(data+'DOD').style.display="none";
     }
 }
+System.prototype.removeEmojis = function(text){
+    const bytes = Uint8Array.from(text, char => char.charCodeAt(0));
+    text = new TextDecoder('utf-8').decode(bytes);
+    text = decodeURIComponent(text);
+    return (text.replace(
+        /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|\uD83E[\uDD00-\uDFFF])/g,
+        ''
+    ));
+}
 System.prototype.downloadCode = function(id,name){
     const textToDownload = document.getElementById(id).textContent;
     // const fileName = "downloaded_file.txt";
