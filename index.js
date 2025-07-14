@@ -26,7 +26,7 @@ class WEB{
         this.active = true;
         this.port = port;
         this.filename = path.basename(__filename);
-        this.appInfo = jsonfile.readFileSync('./public/manifest.json');   
+        this.appInfo = jsonfile.readFileSync('./public/manifest.json');
     }
 }
 
@@ -36,13 +36,32 @@ const PORT = process.env.PORT || 3000;
 const AppName = "kidKrishkode";
 let web = new WEB(PORT);
 
+app.use((req, res, next) => {
+    if(String(req.url).startsWith('/images') || String(req.url).startsWith('/assets')){
+        let filePath = path.join(__dirname, req.url);
+        if(req.hostname!='localhost' && req.hostname!='127.0.0.1'){
+            const hostedURL = `https://kidkrishkode.github.io/kidKrishkode/${req.url}`;
+            return res.redirect(302, hostedURL);
+        }else{
+            res.sendFile(filePath, err => {
+                if(err){
+                    console.error(`File not found: ${filePath}`);
+                    res.status(404).send('Requested file not found on the server, please check the path url');
+                }
+            });
+            return;
+        }
+    }
+    next();
+});
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use('/config',express.static(path.join(__dirname,'config')));
-app.use('/images',express.static(path.join(__dirname,'images')));
-app.use('/public',express.static(path.join(__dirname,'public')));
-app.use('/assets',express.static(path.join(__dirname,'assets')));
+app.use('/config',express.static(path.join(__dirname,'config'), {maxAge: '30d'}));
+// app.use('/images',express.static(path.join(__dirname,'images'), {maxAge: '30d'}));
+app.use('/public',express.static(path.join(__dirname,'public'), {maxAge: '30d'}));
+// app.use('/assets',express.static(path.join(__dirname,'assets'), {maxAge: '30d'}));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -86,6 +105,10 @@ const promises = [
     // ejs.renderFile('./views/feed.ejs'),
     // ejs.renderFile('./views/faq.ejs')
 ];
+
+app.get('/public', (req, res) => {
+    console.log(req.originalUrl);
+});
 
 app.get('/', (req, res) => {
     Promise.all(promises).then(([header]) => {
