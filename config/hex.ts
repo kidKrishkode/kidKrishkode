@@ -183,7 +183,6 @@ module.exports = {
             link = link.replace('https://github.com/', 'https://api.github.com/repos/');
             let file = link.lastIndexOf('/');
             link = link.substring(0, file) + '/contents/' + link.substring(file + 1);
-            console.log(link);
             if(link.startsWith('https://api.github.com/repos/') != true) return null;
             try{
                 const response = await fetch(link);
@@ -200,7 +199,7 @@ module.exports = {
         return null;
     },
     descriptionSet: (desc) => {
-        if(desc.indexOf('https://github.com/')>=0){
+        if(desc.indexOf('https://github.com/')>=0 && desc.startsWith('https://github.com/')){
             let fileContent = module.exports.gitCaller(desc);
             if(fileContent==null){
                 return 'Error: 503!\nDescription context fetching faild due to some network problem or security purpose.\n\n';
