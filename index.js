@@ -206,6 +206,17 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/hire_me', (req, res) => {
+    Promise.all(promises).then(([header]) => {
+        res.status(200).render('hire',{header});
+    });
+});
+
+app.post('/hire_details', (req, res) => {
+    let formData = req.body.formData;
+    console.log(formData);
+    res.status(200).json({request_id: 'dev@kidkrishkode'});
+});
 
 WEB.prototype.getAge = function(time){
     return (new Date().getFullYear()) - ((time[0]*1000)+(time[1]*100)+(time[2]*10)+(time[3]*1));
