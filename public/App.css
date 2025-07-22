@@ -83,6 +83,9 @@ html{
 .navbar{
     background: transparent!important;
     font-weight: bold;
+    ul li a svg{
+        display: none;
+    }
 }
 .navbar-toggler{
     display: none;
@@ -306,11 +309,18 @@ footer{
 .hambarger-menu{
     width: 40%;
     position: absolute;
-    top: 8%;
+    /* top: 8%;
     right: 5%;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 10px; */
     box-shadow: 0px 0px 2px 1px grey;
+    /*new code for side nav*/
+    height: 100%;
+    top: 0%;
+    right: 0px;
+    width: 60%;
+    border-radius: 0px;
+    background: var(--bg-color);
 }
 .hambarger-menu ul{
     display: flex;
@@ -318,6 +328,9 @@ footer{
 }
 .hambarger-menu ul li{
     border-bottom: 1px solid grey;
+    a svg{
+        margin-right: 10px;
+    }
 }
 .hambarger-menu ul li:nth-child(5){
     border: none;
